@@ -118,11 +118,12 @@ main {
   padding-top: 1rem;
 }
 
+
 .aircraftModelDisplay img {
   width: 100%;
-  height: 80%;
   object-fit: cover;
   min-height: 20vh;
+  display: block;
 }
 
 .aircraftModelDisplay a {
@@ -137,6 +138,58 @@ main {
 }
 
 .aircraftModelDisplay a:hover {
+  color: #000;
+  background-color: #d4d4d4;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  border-radius: 0;
+}
+
+.imageOverlay p {
+  color: rgba(255, 255, 255, 0);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0 1rem;
+  transition: color 0.3s ease;
+  margin: 0;
+}
+
+.imageOverlay.revealed {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.imageOverlay.revealed p {
+  color: rgba(255, 255, 255, 1);
+}
+
+.readMoreBtn {
+  display: inline-block;
+  min-width: 9rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: solid 1px #aaa;
+  text-align: center;
+  background: none;
+  color: #555;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.readMoreBtn:hover {
   color: #000;
   background-color: #d4d4d4;
 }
