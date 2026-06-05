@@ -13,10 +13,10 @@ for (var i = 0; i < coll.length; i++) {
     });
 }
 
-document.querySelectorAll('.readMoreBtn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        var overlay = this.closest('.aircraftModelDisplay').querySelector('.imageOverlay');
-        overlay.classList.toggle('revealed');
-        this.textContent = overlay.classList.contains('revealed') ? 'Read less' : 'Read more';
+document.querySelectorAll(".readMoreBtn").forEach(function(btn) {
+    btn.addEventListener("click", function() {
+        var overlay = this.closest(".aircraftModelDisplay").querySelector(".imageOverlay");
+        overlay.classList.toggle("revealed");
+        this.textContent = overlay.classList.contains("revealed") ? "Read less" : "Read more";
     });
 });
